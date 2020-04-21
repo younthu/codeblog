@@ -1,0 +1,1 @@
+config.comments_registration_name = 'AdminComment'
