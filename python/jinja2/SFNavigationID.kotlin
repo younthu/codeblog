@@ -1,0 +1,12 @@
+enum class SFNavigationID(val id: String) {
+    UNKNOWN("unknown")
+
+    
+    {% for navi in ids %}
+    // module: {{navi.module}}
+    // naviId: {{navi.navigationId}}
+    // use case: {{navi.useCase}}
+    // user story: {{navi.userStory}}
+    {{navi.upperCaseEnum}}("{{navi.navigationId}}"),
+    {% endfor %}
+}
