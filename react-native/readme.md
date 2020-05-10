@@ -71,3 +71,17 @@
         }
         ~~~
     5. 命令行启动storybook的时候就会自动切换到storybook里面去: `yarn storybook`
+
+# 按原始比例缩放显示图片
+
+1. 单独只用Image,然后设置宽高, resizeMode: 'contain', 这是不会正常工作的。可能是做布局的时候Image布局有bug。
+1. 正确做法： 包一层View, 做布局。 设置宽度'100%', aspectRatio为图片宽高比。
+2. View下面放置Image或者ImageBackground, width '100%', height '100%', resizeMode: 'contain'
+3. Done
+
+~~~jsx
+
+            <View style={{width: '100%', aspectRatio: 751/351.0}}>
+                <ImageBackground source={require("./assets/img/head.png")} style={{ width: '100%', height: '100%', resizeMode: 'contain', justifyContent: 'center'}} />
+            </View>
+~~~
