@@ -1,0 +1,2 @@
+[server1]
+52.199.86.205 ansible_user=ubuntu ansible_ssh_private_key_file=~/sourcecode/.private/zhiyongmacsshkey/id_rsa

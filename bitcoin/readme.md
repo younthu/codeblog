@@ -8,6 +8,7 @@
 8. [LBC, Large Bitcoin Collider](https://lbc.cryptoguru.org/about)
 9. [LBC 奖品池](https://lbc.cryptoguru.org/trophies), 2017年以后就没有更新过了。
 10. 2017-03-25, LBC, 搜索速度为500 Mkeys/s. 最开始的时候只有0.15 Mkeys/s. 2017-10-30为止搜索了超过8000 tn keys.
+11. 开源的FPGA算法库, [Open-Source FPGA Bitcoin Miner](https://github.com/progranism/Open-Source-FPGA-Bitcoin-Miner)。
 
 
 参考:

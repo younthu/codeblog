@@ -1,0 +1,1 @@
+1. 相关文档 https://developers.weixin.qq.com/miniprogram/introduction/qrcode.html#测试调试
