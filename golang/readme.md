@@ -14,3 +14,8 @@
 包管理, govendor或者go mod
 1. go get -u github.com/gin-gonic/gin
 2. 
+
+
+# 坑
+
+1. json Struct的字段首字母不大写会导致json.Unmarshal解析失败，并且不抛错。 小写不能被外部访问。
