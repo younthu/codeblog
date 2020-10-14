@@ -1,3 +1,6 @@
+# capistrano是基于ssh的，无需远程脚本支持。
+在全新的cap文件提交到git之前，本地运行`bundle install`, 然后运行`cap production deploy`就可以全新部署rails服务了，说明远程无任何rails脚本依赖.
+
 # puma启动失败, No such file or directory - connect(2) for "/var/www/current"
 
 该问题发生在docker容器重新做,改变了工作目录， container重新做好以后共享了shared目录。shared/puma.rb残留有上一次成功部署的路径。删除shared/puma.rb即可.
