@@ -7,7 +7,8 @@
 7. [https://brd.com/blog/large-bitcoin-collider](https://brd.com/blog/large-bitcoin-collider)
 8. [LBC, Large Bitcoin Collider](https://lbc.cryptoguru.org/about)
 9. [LBC 奖品池](https://lbc.cryptoguru.org/trophies), 2017年以后就没有更新过了。
-10. 2017-03-25, LBC, 搜索速度为500 Mkeys/s. 最开始的时候只有0.15 Mkeys/s. 2017-10-30为止搜索了超过8000 tn keys.
+10. 2017-03-25, LBC, 搜索速度为500 Mkeys/s(为5*10^8, 约等于2^29). 最开始的时候只有0.15 Mkeys/s. 2017-10-30为止搜索了超过8000 tn keys.
+   1. 2020年10月，BTC全网算力为130EH(1.3*10^20 hash/s, 约为2^66),1 EH为1,000,000,000,000,000,000 H。
 11. 开源的FPGA算法库, [Open-Source FPGA Bitcoin Miner](https://github.com/progranism/Open-Source-FPGA-Bitcoin-Miner)。
 
 
