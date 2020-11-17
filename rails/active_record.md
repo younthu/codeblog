@@ -31,3 +31,28 @@ class Board < ApplicationRecord
   end
 end
 ~~~
+
+# 在没有rails的情况下连接active_record
+教程: [ruby-activerecord-without-rails-tutorial](https://www.devdungeon.com/content/ruby-activerecord-without-rails-tutorial)
+
+sample
+~~~ruby
+require 'active_record'
+
+ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'test.db')
+
+class User < ActiveRecord::Base
+end
+
+# Create a new user object then save it to store in database
+new_user = User.new(name: 'Dano', age: 30)
+new_user.save
+
+User.new { |u|
+    u.name = 'NanoDano'
+    u.age = 60
+}.save
+
+# Create and save in one step with `.create()`
+User.create(name: 'John Leon', age: 90)
+~~~
