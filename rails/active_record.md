@@ -56,3 +56,13 @@ User.new { |u|
 # Create and save in one step with `.create()`
 User.create(name: 'John Leon', age: 90)
 ~~~
+
+# 内容按特定key分组
+
+~~~ruby
+    @uer = current_user
+    @sess = Message.where(sender:@user).or(Message.where(receiver:@uer)).group_by(&:session_id)
+    render json:sess, include: [:sender, :receiver, :payload]
+~~~
+
+得到按session_id分组的内容，注意，它会自动分组，还支持include方法。

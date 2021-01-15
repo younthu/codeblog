@@ -25,3 +25,5 @@
 2. [fpga算力](https://www.msra.cn/zh-cn/news/features/fpga-20170111)
 1. [btc钱包碰撞工具，开源](https://github.com/basil00/pairgen)
 1. [钱包碰撞项目, 分布式的，和上面的lbc是同一个项目](https://lbc.cryptoguru.org/)
+1. [How hard is it to brute force a bitcoin private key](https://news.bitcoin.com/how-hard-is-it-to-brute-force-a-bitcoin-private-key/), 每秒9m address, =2^23, 暴力破解一个钱包大概需要2^(160-23)=2^137s, 大概20^24年.
+1. [高性能显卡每秒6亿私钥](http://www.beenews.pro/a/100113045.html)
