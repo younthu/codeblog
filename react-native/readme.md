@@ -1,5 +1,6 @@
 # 常用packages
 
+1. [Reactotron](https://infinite.red/reactotron), 开源[github](https://github.com/infinitered/reactotron)，可以调试event的React Native工具。
 1. [react-native-elements](https://github.com/react-native-elements/react-native-elements), 一个跨平台的React Native UI Kit, 它跨web!
 2. [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons), 矢量图标库。如果不能正常工作，可以运行`yarn react-native link`, `pod install`
 3. [Lottie](https://github.com/react-native-community/lottie-react-native), 矢量动画库.
