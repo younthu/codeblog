@@ -66,3 +66,51 @@ User.create(name: 'John Leon', age: 90)
 ~~~
 
 得到按session_id分组的内容，注意，它会自动分组，还支持include方法。
+
+# 检测字段重复
+
+~~~ruby
+class User < ApplicationRecord
+   validate :duplicated_uid
+
+   private
+     def duplicated_uid
+    uid = self.uid
+    u = User.find_by uid:uid
+    if u
+      errors.add(:mobile, "手机号用户#{uid}已经存在，请勿重复创建会员。")
+    end
+  end
+end
+
+~~~
+
+1. How to fail model validation.
+   ~~~ruby
+    def something
+      errors.add(:base, 'error message') # 有error的情况下active record就不会保存。
+    end
+   ~~~
+
+   自定义错误信息
+   ~~~ruby
+   validates :name, uniqueness: {
+      message: ->(object, data) do
+        "#{data[:value]} is taken already! See this shoe here #{Shoe.find_by({name: data[:value]}).url}"
+      end
+    }
+   ~~~
+
+   ~~~ruby
+
+     before_save :check_required_fields
+     private
+      def check_required_fields()
+        # 如果一开卡,则必须要有开卡日期
+        if self.status.to_sym == :normal
+          if not self.start_at.present?
+            self.errors.add(:start_at, "开卡必须填开卡日期")
+          end
+        end
+      end
+   ~~~

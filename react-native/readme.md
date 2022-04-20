@@ -5,6 +5,7 @@
 2. [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons), 矢量图标库。如果不能正常工作，可以运行`yarn react-native link`, `pod install`
 3. [Lottie](https://github.com/react-native-community/lottie-react-native), 矢量动画库.
 4. [React Native Login Screen](https://github.com/WrathChaos/react-native-login-screen), 一个可配置的登录界面。注意这个npm package依赖于很多其它的包，需要手动安装，github首页有说明。
+1. React-devtools, react hierachy查看工具, `yarn global add react-devtools`
 
 清缓存脚本:
 

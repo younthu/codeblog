@@ -17,6 +17,15 @@ end
 bundle install的时候可以指定路径`bundle install --path /var/www/yoga/yoga-lady/shared/bundle --without development test --deployment --quiet`,
 所有环境都装到指定目录下。
 
-`bundle exec`的意义是寻找当前目录下的`.bundle/config`文件，加载正确的bundle环境. 
+`bundle exec`的意义是寻找当前目录下的`.bundle/config`文件，加载正确的bundle环境.
 
 所以, `rails c`不工作的时候可能是因为gems没有装默认目录下，而是装到指定目录了，可以试试`bundle exec rails c`.
+
+# sample code
+
+1. {name: 'a', state: 1}.values_at(:name, :state, :value) # ['a', 1, nil]
+1. [ActiveSupport::Concern小结](https://ruby-china.org/topics/19812)
+
+
+# notes
+1. Object::HashWithIndifferentAccess, hash，把同名symbol和string作为同一个key来访问, h[:a] 和h["a"]效果一样。
