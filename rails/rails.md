@@ -29,3 +29,10 @@ bundle install的时候可以指定路径`bundle install --path /var/www/yoga/yo
 
 # notes
 1. Object::HashWithIndifferentAccess, hash，把同名symbol和string作为同一个key来访问, h[:a] 和h["a"]效果一样。
+1. 加载子目录里面定义的类型:
+   ~~~ruby
+    config.autoload_paths << Rails.root.join("app", "models", "messages")
+    config.autoload_paths << Rails.root.join("app", "models", "strategies")
+    config.autoload_paths << Rails.root.join("lib")
+   ~~~
+2. 在不同目录下执行命令行命令: `out, err, st = Open3.capture3(cmd, chdir: './crashlogs')`
